@@ -185,8 +185,8 @@ class ViewerActivity : Activity() {
         val old = tiles[selected]
         val new = tiles[i]
         selected = i
-        old.setMain(false)
-        new.setMain(true)
+        old.markMain(false)
+        new.markMain(true)
         buildLayout()
         new.start()
         old.start()
@@ -303,7 +303,7 @@ class ViewerActivity : Activity() {
             )
         }
 
-        fun setMain(m: Boolean) {
+        fun markMain(m: Boolean) {
             main = m
             updateLook()
         }
